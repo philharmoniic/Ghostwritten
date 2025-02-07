@@ -3,7 +3,7 @@ init python:
     class Date(datetime.date):
 
         @property
-        def day(self):
+        def day_word(self):
             return _strftime("%A", self.timetuple())
         @property
         def day_short(self):

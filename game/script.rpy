@@ -219,4 +219,6 @@ label start:
 
     "{b}PROLOGUE: END{/b}"
 
-    "Today is [cal.day], [cal.month], [cal.day]."
+    $ cal += day_inc
+
+    "Today is [cal.day_word], [cal.month] [cal.day]."
