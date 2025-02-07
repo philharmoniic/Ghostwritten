@@ -181,36 +181,42 @@ label start:
 
     Calem "See, it's great because I have no need for money, I don't need to sleep, I don't have a life outside of-"
 
-    Steven "Huh? Are you serious? I know ghosts can't get possessed, but something has to possess you to offer that to me."
+    Steven "No."
 
     Steven "Subjecting yourself to hours of torture for {i}nothing{/i}? I wouldn't even let you do that if you were alive."
 
-    Calem "Okay, well, maybe not entirely for nothing..."
+    Calem "Okay, well, my offer isn't {i}entirely{/i} free. To get my services, I want you..."
 
-    Calem "I want you to go out with me!"
+    Calem "...to go out with me!"
 
     Steven "..."
 
-    Calem "Okay, wait, wait - Take me with you! When you go outside! Please?"
+    Calem "Wait, wait! Actually, actually, I meant - Take me with you! When you go outside! Please?!"
 
-    Steven "... We need to work on your delivery."
+    Steven "Oh. Why didn't you say so?"
     
-    Steven "But sure, then. I can do that. I mean, it's not as if I go anywhere exciting, but..."
+    Steven "Sure, then. I can do that. I mean, it's not as if I go anywhere exciting, but..."
 
     Calem "Dude, are you serious?! Everything's exciting! Do you just sit in your room all day?"
 
-    Steven "I went out to the grocery store last week to buy detergent. That was it."
+    Steven "I went out to the grocery store last week to buy laundry detergent. And took out the trash. And walked to the dining hall."
 
     Calem "Awh, jeez, dude. We really need to work on that."
 
-    Steven "Do you have any ideas?"
+    Steven "What're your ideas, then?"
 
-    Calem "The park, the bookstore, the ice cream place, the forest, the cemetary..."
+    Calem "Okay - New condition for my tutoring! You're required to go off campus at least twice a week!"
 
-    Steven "You're scaring me."
+    Steven "Terrifying."
 
-    Calem "Ahaha! Let's go everywhere and see the world!"
+    Calem "Ahaha! Well, you gotta do it scared! It'll be fun, I promise!"
+    
+    Calem "Steven, was it? I hereby declare that I, Calem, will help you live life more than ever before!"
 
     Steven "Well."
 
+    Steven "{i}At least he sounds happy about it.{/i}"
+
     "{b}PROLOGUE: END{/b}"
+
+    "Today is [cal.day], [cal.month], [cal.day]."
