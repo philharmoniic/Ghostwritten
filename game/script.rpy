@@ -1,6 +1,15 @@
 ﻿define Calem = Character('Calem', color = "#c5fffd", what_prefix='"', what_suffix='"')
 define Steven = Character('Steven', color = "#2f39c7", what_prefix='"', what_suffix='"')
 
+# define stats
+
+default stamina_points = 10
+default charisma = 0
+default sleep = 0
+default intelligence = 0
+default happiness = 0
+default romance = 0
+
 label start:
 
     scene bg dark room
@@ -12,13 +21,15 @@ label start:
 
     "{i}Assignment Released: Your Test 3 for MATH2401 has been graded! You can access your graded submission through the link below!{/i}"
     
-    Steven "It can't be that bad, right? I studied... somewhat. I think I did okay."
+    Steven """
+    It can't be that bad, right? I studied... somewhat. I think I did okay."
+    
+    ...
 
-    Steven "..."
+    Oh.
 
-    Steven "Oh."
-
-    Steven "I didn't even know the scores {i}went{/i} that low..."
+    I didn't even know the scores {i}went{/i} that low...
+    """
 
     "{i}Student: Steven Vuong\nTotal Points: 7.5/100{/i}"
 
@@ -222,3 +233,22 @@ label start:
     $ cal += day_inc
 
     "Today is [cal.day_word], [cal.month] [cal.day]."
+
+    menu day_options:
+        "{i}How do you want to spend your day?{/i}"
+
+        "I want to study!":
+            "{i}You caught up on your lectures, and did some homework! One step closer to passing your exams!{/i}"
+            $ intelligence += 1
+            "{i}You gained 1 intelligence point!{/i}"
+        
+        "I want to go out!":
+            "This is a placeholder, but assume you went somewhere cool!"
+
+        "I want to rest!":
+            "You flopped into your bed, and took a nap! Begone, sleep debt!"
+            $ sleep += 1
+            "{i}You restored 10 SP!{/i}"
+
+    label after_menu:
+        "You had a pretty fulfilling day! Now, it's bedtime!"
