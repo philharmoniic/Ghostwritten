@@ -15,6 +15,8 @@ init python:
         def month_short(self):
             return _strftime("%b", self.timetuple())
 
+    weekdays = ("Monday", "Tuesday", "Wednesday", "Thursday", "Friday")
+
 default cal = Date(2024, 11, 1)
 define day_inc = datetime.timedelta(days=1)
 

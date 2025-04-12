@@ -221,62 +221,42 @@ label start:
 
     "{b}PROLOGUE: END{/b}"
 
-    $ cal += day_inc
-
-    "Today is [cal.day_word], [cal.month] [cal.day]."
-
-    menu class_options:
-        "{i}Will you go to class today?{/i}"
-
-        "{i}Of course I will!{/i}":
-            "{i}With a great deal of effort, you forced yourself out of your warm bed and headed to class.{/i}"
-            jump phys_scene_1
-            "{i}Your lecture finally ended! Freedom!{/i}"
-            jump day_options
-
-    menu day_options:
-        "{i}How do you want to spend your day?{/i}"
-
-        "I want to study!":
-            "{i}You caught up on your lectures, and did some homework! One step closer to passing your exams!{/i}"
-            $ intelligence += 1
-            "{i}You gained 1 intelligence point!{/i}"
+    label day:
         
-        "I want to go out!":
-            "This is a placeholder, but assume you went somewhere cool!"
+        $ cal += day_inc
 
-        "I want to rest!":
-            "You flopped into your bed, and took a nap! Begone, sleep debt!"
-            $ sleep += 1
-            "{i}You restored 10 SP!{/i}"
+        "Today is [cal.day_word], [cal.month] [cal.day]."
+
+        if cal.day_word in weekdays:
+            menu class_options:
+                "{i}Will you go to class today?{/i}"
+
+                "{i}Of course I will!{/i}":
+                    "{i}With a great deal of effort, you forced yourself out of your warm bed and headed to class.{/i}"
+                    call phys_scene_1
+                    "{i}Your lecture finally ended! Freedom!{/i}"
+                    jump day_options
+
+        menu day_options:
+            "{i}How do you want to spend your day?{/i}"
+
+            "I want to study!":
+                "{i}You caught up on your lectures, and did some homework! One step closer to passing your exams!{/i}"
+                $ intelligence += 1
+                "{i}You gained 1 intelligence point!{/i}"
+            
+            "I want to go out!":
+                "This is a placeholder, but assume you went somewhere cool!"
+
+            "I want to rest!":
+                "You flopped into your bed, and took a nap! Begone, sleep debt!"
+                $ sleep += 1
+                "{i}You restored 10 SP!{/i}"
 
     label end_of_day_menu:
         "{i}You had a pretty fulfilling day! Now, it's bedtime!{/i}"
-
-    label phys_scene_1:
-        "{i}You walked into PHYS 2450 at 9:00AM, furiously rubbing your eyes to stay awake.{/i}"
-
-        Calem "Ooooh, physics! This is so cool!"
-
-        Steven "I wish it were."
-
-        Calem "But you guys to get to play with magnets! And electricity! Isn't that cool?!"
-
-        Steven "That's different from trying to calculate voltages by hand."
-
-        "He shows Calem his notebook."
-
-        Calem "Gah! Are those hieroglyphics, or something?! This is terrifying!"
-
-        Steven "Indeed."
-
-        Steven "It was pretty fun on the day that someone accidentally shocked themself, though?"
-
-        Calem "That's mean!"
-
-        Steven "That someone was me."
-
-        Calem "Oh..."
+        "{i}See you tomorrow!{/i}"
+        jump day
 
 
         

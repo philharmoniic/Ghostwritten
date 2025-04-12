@@ -29,3 +29,14 @@ traceback.txt
 files.txt
 
 # End of https://www.toptal.com/developers/gitignore/api/renpy
+game/scripts/events.rpyc
+*.rpyc
+*.save
+*.rpyb
+errors.txt
+game/cache/shaders.txt
+game/saves/navigation.json
+game/saves/persistent
+game/saves/navigation.json
+game/cache/shaders.txt
+*.save
