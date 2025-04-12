@@ -231,6 +231,8 @@ label start:
         "{i}Of course I will!{/i}":
             "{i}With a great deal of effort, you forced yourself out of your warm bed and headed to class.{/i}"
             jump phys_scene_1
+            "{i}Your lecture finally ended! Freedom!{/i}"
+            jump day_options
 
     menu day_options:
         "{i}How do you want to spend your day?{/i}"
@@ -275,10 +277,6 @@ label start:
         Steven "That someone was me."
 
         Calem "Oh..."
-
-        "{i}Your lecture finally ended! Freedom!{/i}"
-
-        jump end_of_day_menu
 
 
         
